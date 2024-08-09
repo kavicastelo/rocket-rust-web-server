@@ -1,6 +1,8 @@
 #[macro_use] extern crate rocket;
 
 mod routes;
+mod controllers;
+mod services;
 
 use routes::health::health_check;
 use routes::user::get_user;
