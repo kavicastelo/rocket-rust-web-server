@@ -4,7 +4,22 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-rocket = "0.5.0-rc.3"
-rocket_codegen = "0.5.0-rc.3"
-serde = { version = "1.0", features = ["derive"] }
-serde_json = "1.0"
+serde = { version = "1.0.1", features = ["derive", "rc"] }
+serde_json = "1.0.1"
+diesel = { version = "2.1", features = ["postgres", "serde_json"] }
+dotenvy = "0.15"
+rocket_dyn_templates = "0.2.0"
+uuid = { version = "1.0", features = ["serde", "v4"] }
+chrono = "0.4"
+
+[dependencies.rocket]
+version = "0.5.0-rc.2"
+features = ["json", "uuid"]
+
+[dependencies.rocket_sync_db_pools]
+version = "0.1.0-rc.2"
+features = ["diesel_postgres_pool"]
+
+[build-dependencies]
+diesel = { version = "2.1", features = ["postgres"] }
+
