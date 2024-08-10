@@ -1,7 +1,12 @@
-use rocket::get;
-use crate::controllers::user_controller;
+use rocket::Route;
 
-#[get("/user/<id>")]
-pub fn get_user(id: u32) -> String {
-    user_controller::get_user(id)
+use crate::controllers::{create_user, delete_user, get_user, update_user};
+
+pub fn routes() -> Vec<Route> {
+    routes![
+        create_user,
+        get_user,
+        update_user,
+        delete_user,
+    ]
 }
