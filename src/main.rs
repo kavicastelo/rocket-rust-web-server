@@ -5,9 +5,6 @@ mod controllers;
 mod services;
 mod models;
 mod schema;
-mod routes{
-    pub mod user;
-}
 
 #[launch]
 fn rocket() -> _ {

@@ -5,6 +5,6 @@ diesel::table! {
         id -> Uuid,
         name -> Text,
         email -> Text,
-        created_at -> Timestamptz,
+        created_at -> Nullable<Timestamptz>,
     }
 }

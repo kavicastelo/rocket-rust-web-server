@@ -1,2 +1,2 @@
 [global.databases]
-postgres_db = { url = "postgres://username:password@localhost/your_database_name" }
+postgres_db = { url = "postgres://postgres:1234@localhost/rocket_server" }
