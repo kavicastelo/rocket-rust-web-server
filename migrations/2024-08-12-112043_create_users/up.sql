@@ -1,6 +1,6 @@
 CREATE TABLE users (
-                       id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+                       id UUID PRIMARY KEY,
                        name TEXT NOT NULL,
-                       email TEXT NOT NULL UNIQUE,
-                       created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
+                       email TEXT NOT NULL,
+                       created_at TIMESTAMPTZ NULL
 );
