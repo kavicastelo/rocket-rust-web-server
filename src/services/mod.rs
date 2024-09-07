@@ -1,10 +1,8 @@
 use diesel::prelude::*;
 use diesel::pg::PgConnection;
-use diesel::sql_types::{Uuid as DieselUuid, Text, Timestamptz};
 use crate::models::{User, NewUser};
-use crate::schema::users::dsl::{users, id, name, email, created_at};
+use crate::schema::users::dsl::{users, id, name, email};
 use uuid::Uuid;
-use chrono::Utc;
 
 pub fn create_user(conn: &mut PgConnection, new_user: NewUser) -> QueryResult<User> {
     diesel::insert_into(users)

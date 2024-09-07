@@ -1,5 +1,4 @@
 use rocket::serde::json::Json;
-use rocket::State;
 use diesel::pg::PgConnection;
 use rocket_sync_db_pools::database;
 use crate::services;
