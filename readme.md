@@ -1,4 +1,4 @@
-# Rocket Web Server with Diesel & PostgreSQL
+# Rocket Rust Web Server with Diesel & PostgreSQL
 
 This project is a web server built with [Rocket](https://rocket.rs), using [Diesel](https://diesel.rs) for database
 management and PostgreSQL as the database.
